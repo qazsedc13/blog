@@ -1,0 +1,2 @@
+STRINGstring
+string

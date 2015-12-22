@@ -31,3 +31,51 @@ NameError: name 'version' is not defined
 >>> os.system('ping 8.8.8.8 -t')
 -1073741510
 >>> 
+
+>>> 
+>>> 
+>>> f = open('D:/Programming/python/test.txt', 'w')
+>>> f.write('string1 \r\n')
+10
+>>> f.write('string2')
+7
+>>> f.close()
+>>> f = open('D:/Programming/python/test.txt', 'r')
+>>> f.read(7)
+'string1'
+>>> f.read()
+' \n\nstring2'
+>>> f.close()
+>>> 
+>>> 
+>>> f = open('D:/Programming/python/test.txt', 'w')
+>>> f.write
+<built-in method write of _io.TextIOWrapper object at 0x026858B0>
+>>> f.write('abcdef')
+6
+>>> f.seek(3)
+3
+>>> f.write('CD')
+2
+>>> f.close()
+>>> 
+>>> 
+>>> f = open('D:/Programming/python/test.txt', 'r')
+>>> f.readline()
+'string\n'
+>>> f.readlines()
+['string\n', 'string']
+>>> f.close()
+>>> f = open('D:/Programming/python/test.txt', 'r')
+>>> strings = f.readlines()
+>>> f.close()
+>>> strings[0]='STRING'
+>>> f = open('D:/Programming/python/test.txt', 'w')
+>>> f.writelines()
+Traceback (most recent call last):
+  File "<pyshell#42>", line 1, in <module>
+    f.writelines()
+TypeError: writelines() takes exactly one argument (0 given)
+>>> f.writelines(strings)
+>>> f.close()
+>>> 
